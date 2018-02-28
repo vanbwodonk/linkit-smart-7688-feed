@@ -31,7 +31,7 @@ define Package/mtk-lede-linkit
   	#+avahi-nodbus-daemon +mountd +mjpg-streamer \
 	#+uhttpd +rpcd +rpcd-mod-iwinfo +git +git-http +samba36-server \
 	#+python +python-pyserial +python-pip +hidapi \
-	#+libmraa +libupm +node +node-hid +node-cylon-firmata +yunbridge \
+	#+node +node-hid +node-cylon-firmata +yunbridge \
 	#+luci +luci-theme-openwrt +luci-app-mjpg-streamer +luci-app-samba +luci-lib-json \
 	#+rpcd-mod-rpcsys +cgi-io +avrdude +spi-tools +uboot-envtools \
 	#+kmod-fs-vfat +kmod-fs-exfat +kmod-i2c-core +kmod-i2c-ralink \
@@ -45,12 +45,12 @@ define Package/mtk-lede-linkit
 	#----not fail but removed--------
 	#+luci-theme-openwrt +luci-app-mjpg-streamer
 	#+mjpg-streamer
-	#+kmod-video-core +kmod-video-uvc \
+	#+kmod-video-core +kmod-video-uvc
+	#+mtk-lede-linkit-webui +mtk-sdk-wifi
 
 	#----fail-----------
 	#+libmraa +libupm
 	#+kmod-sound-mtk
-	#+mtk-lede-linkit-webui +mtk-sdk-wifi
 
   CATEGORY:=Base system
   DEFAULT:=y
