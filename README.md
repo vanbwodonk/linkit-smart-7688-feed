@@ -1,5 +1,5 @@
-# linkit-smart-LEDE-feed
-Feeds linkit smart 7688 for Lede 17.01
+# linkit-smart-LEDE-feeds
+Feeds LEDE 17.01.4 for linkit smart 7688
 
 # Build the firmware from sources
 
