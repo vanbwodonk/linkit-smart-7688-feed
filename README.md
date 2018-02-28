@@ -52,16 +52,16 @@ In the Ubuntu system, open the *Terminal* application and type the following com
     $ make menuconfig
     ```
     * Select the options as below:
-        * Target System: `Ralink RT288x/RT3xxx`
+        * Target System: `Mediatek Ralink MIPS`
         * Subtarget: `MT7688 based boards`
-        * Target Profile: `LinkIt7688`
+        * Target Profile: `Mediatek  LinkIt Smart 7688`
     * Save and exit (**use the deafult config file name without changing it**)
 8. Start the compilation process:
     
     ```
     $ make V=99
     ```
-9. After the build process completes, the resulted firmware file will be under `bin/ramips/openwrt-ramips-mt7688-LinkIt7688-squashfs-sysupgrade.bin`. Depending on the H/W resources of the host environment, the build process may **take more than 2 hours**.
+9. After the build process completes, the resulted firmware file will be under `bin/targets/ramips/mt7688/lede-ramips-mt7688-LinkIt7688-squashfs-sysupgrade.bin`. Depending on the H/W resources of the host environment, the build process may **take more than 2 hours**.
 
 10. You can use this file to do the firmware upgrade through the Web UI. Or rename it to `lks7688.img` for upgrading through a USB drive.
 
