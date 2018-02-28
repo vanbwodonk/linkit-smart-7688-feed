@@ -23,7 +23,7 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 2. Download & extract lastest LEDE release source codes:
     ```
     $ wget https://github.com/lede-project/source/archive/v17.01.4.tar.gz
-    tar -xzvf v17.01.4.tar.gz
+    $ tar -xzvf v17.01.4.tar.gz
     ```
     
 3. Prepare the default configuration file for feeds:
