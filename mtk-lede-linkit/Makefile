@@ -12,7 +12,7 @@ define Package/mtk-lede-linkit
   TITLE:=MTK LinkIt Smart board support package
   DEPENDS:=@TARGET_ramips_mt7688_DEVICE_LinkIt7688 \
   	+gdbserver +curl +strace +coreutils +coreutils-stty \
-    +avahi-nodbus-daemon +blockd \
+    +avahi-nodbus-daemon +mountd \
     +uhttpd +rpcd +rpcd-mod-iwinfo  +git +git-http +samba36-server \
     +python +python-pyserial +python-pip +hidapi \
     +node +node-hid +node-cylon-firmata +yunbridge \
