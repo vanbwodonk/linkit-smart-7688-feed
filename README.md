@@ -20,14 +20,15 @@ In the Ubuntu system, open the *Terminal* application and type the following com
     $ sudo apt-get install git g++ make libncurses5-dev subversion libssl-dev gawk libxml-parser-perl unzip wget python xz-utils
     ```
 
-2. Download OpenWrt CC source codes:
+2. Download & extract lastest LEDE release source codes:
     ```
-    $ git clone https://git.lede-project.org/source.git Lede
+    $ wget https://github.com/lede-project/source/archive/v17.01.4.tar.gz
+    tar -xzvf v17.01.4.tar.gz
     ```
     
 3. Prepare the default configuration file for feeds:
     ```
-    $ cd Lede
+    $ cd source-17.01.4
     $ cp feeds.conf.default feeds.conf
     ```
     
