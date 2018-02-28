@@ -1,7 +1,5 @@
-# linkit-smart-feed
-This feeds holds the SDK wifi driver and the config/meta package for the LinkIt Smart 7688 (Duo)
-
-**Note**: LinkIt Smart 7688 uses the MediaTek proprietary Wi-Fi driver. While OpenWrt Chaos Calmer is evolving, only selected Linux kernel versions of it are supported by the Wi-Fi driver (3.18.21 ~ 3.18.44). If you are looking for a non-proprietary Wi-Fi driver, the [mt76](https://github.com/openwrt/mt76) project would be a reference of the choice.
+# linkit-smart-LEDE-feed
+Feeds linkit smart 7688 for Lede 17.01
 
 # Build the firmware from sources
 
@@ -24,19 +22,19 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 
 2. Download OpenWrt CC source codes:
     ```
-    $ git clone git://git.openwrt.org/15.05/openwrt.git
+    $ git clone https://git.lede-project.org/source.git Lede
     ```
     
 3. Prepare the default configuration file for feeds:
     ```
-    $ cd openwrt
+    $ cd Lede
     $ cp feeds.conf.default feeds.conf
     ```
     
 4. Add the LinkIt Smart 7688 feed:
     
     ```
-    $ echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git >> feeds.conf
+    $ echo src-git linkit https://github.com/vanbwodonk/lks7688-LEDE-feed.git >> feeds.conf
     ```
 5. Update the feed information of all available packages for building the firmware:
     
