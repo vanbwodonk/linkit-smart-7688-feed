@@ -55,6 +55,7 @@ In the Ubuntu system, open the *Terminal* application and type the following com
         * Target System: `Mediatek Ralink MIPS`
         * Subtarget: `MT7688 based boards`
         * Target Profile: `Mediatek  LinkIt Smart 7688`
+    * Add libmraa inside libraries & libupm inside libraries > IoT.
     * Save and exit (**use the deafult config file name without changing it**)
 8. Start the compilation process:
     
