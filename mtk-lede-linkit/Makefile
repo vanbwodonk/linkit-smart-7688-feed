@@ -14,9 +14,8 @@ define Package/mtk-lede-linkit
 		+gdbserver +curl +strace +coreutils +coreutils-stty \
 		+avahi-nodbus-daemon \
 		+block-mount +kmod-fs-ext4 +kmod-usb-storage-extras +e2fsprogs +fdisk \
-		+uhttpd +rpcd +rpcd-mod-iwinfo  +git +git-http +samba36-server \
-		+python +python-pyserial +python-pip +hidapi \
-		+node +node-hid +node-cylon-firmata +yunbridge \
+		+uhttpd +rpcd +rpcd-mod-iwinfo +git +git-http +samba36-server \
+		+hidapi \
 		+luci +luci-app-samba +luci-lib-json \
 		+rpcd-mod-rpcsys +cgi-io +avrdude +spi-tools +uboot-envtools \
 		+kmod-fs-vfat +kmod-fs-exfat +kmod-i2c-core \
@@ -25,6 +24,10 @@ define Package/mtk-lede-linkit
 		+kmod-sdhci-mt7620 +kmod-usb-storage \
 		+kmod-sound-core +kmod-sound-mt7620 +madplay-alsa +alsa-utils \
 		+tcpdump-mini +@KERNEL_DEVMEM\
+
+		#------remove node + phyton for smaller image---------------
+		#+node +node-hid +node-cylon-firmata +yunbridge \
+		#+python +python-pyserial +python-pip \
 
 		#----generic from linkit feeds--------
 		#+gdbserver +curl +strace +coreutils +coreutils-stty \
