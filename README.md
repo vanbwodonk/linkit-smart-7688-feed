@@ -29,13 +29,12 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 3. Prepare the default configuration file for feeds:
     ```
     $ cd source-17.01.4
-    $ cp feeds.conf.default feeds.conf
     ```
     
-4. Add the LinkIt Smart 7688 feed:
+4. Add the LinkIt Smart 7688 feed. Need to place it into the top:
     
     ```
-    $ echo src-git linkit https://github.com/vanbwodonk/lks7688-LEDE-feed.git >> feeds.conf
+    $ echo -e "src-git linkit https://github.com/vanbwodonk/lks7688-LEDE-feed.git\n$(cat feeds.conf.default)" >> feeds.conf
     ```
 5. Update the feed information of all available packages for building the firmware:
     
