@@ -10,7 +10,7 @@ PKG_SOURCE_URL:=https://github.com/intel-iot-devkit/mraa.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_VERSION:=fbb7d9232067eac3f4508a37a8f7ea0c4fcebacb
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
-PKG_BUILD_DEPENDS:=node python/host swig/host node/host
+PKG_BUILD_DEPENDS:=libjson-c node python/host swig/host node/host
 CMAKE_INSTALL:=1
 
 PKG_MAINTAINER:=John Crispin <blogic@openwrt.org>
@@ -23,13 +23,14 @@ CMAKE_OPTIONS=-DBUILDARCH=$(CONFIG_ARCH) \
 	-DENABLEEXAMPLES=0 \
 	-DNODE_EXECUTABLE=$(STAGING_DIR_HOSTPKG)/bin/node \
 	-DSWIG_DIR=$(STAGING_DIR_HOSTPKG)/bin
+#	-DBUILDSWIG=OFF \
 
 TARGET_CFLAGS+=-I$(STAGING_DIR)/usr/include/node
 
 define Package/libmraa
   SECTION:=libs
   CATEGORY:=Libraries
-  DEPENDS:=+python +libstdcpp
+  DEPENDS:=+python +libstdcpp +libjson-c
   TITLE:=Intel IoT lowlevel IO library
 endef
 
